@@ -65,11 +65,21 @@
 
         // Array.prototype.findIndex()
         // Find the comment with this ID
-        // delete the comment with the ID of 823423
+
         let arr4 = comments.findIndex((comment) => {
             return comment.id === 823423
         })
         console.log(arr4);
+        // delete the comment with the ID of 823423
+
+        // let arr5 = comments.splice(arr4, 1)
+        // console.log(arr5, comments);
+
+        let arr6 = comments.slice(0, arr4)
+        let arr7 = comments.slice(arr4 + 1)
+        let arr8 = [...arr6, ...arr7]
+        console.log(arr8);
+        console.log(arr6, arr7, comments);
     </script>
 </body>
 
